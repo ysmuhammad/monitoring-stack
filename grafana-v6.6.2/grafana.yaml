@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+  namespace: monitoring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana
+  template:
+    metadata:
+      name: grafana
+      labels:
+        app: grafana
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: gsb-dlake-prd-grafana
+                operator: In
+                values:
+                - "yes"
+      containers:
+      - name: grafana
+        image: grafana/grafana:6.6.2
+        ports:
+        - name: grafana
+          containerPort: 3000
+          #        resources:
+          #          limits:
+          #            memory: "2Gi"
+          #            cpu: "1000m"
+          #          requests: 
+          #            memory: "1Gi"
+          #            cpu: "500m"
+        volumeMounts:
+          - mountPath: /var/lib/grafana
+            name: grafana-storage
+      volumes:
+        - name: grafana-storage
+          hostPath:
+            path: /app/data/grafana
+            type: Directory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  namespace: monitoring
+  annotations:
+      prometheus.io/scrape: 'true'
+      prometheus.io/port:   '3000'
+spec:
+  selector:
+    app: grafana
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 32000
