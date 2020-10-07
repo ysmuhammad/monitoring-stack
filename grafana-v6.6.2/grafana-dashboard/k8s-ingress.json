@@ -11,7 +11,7 @@
         "type": "dashboard"
       },
       {
-        "datasource": "Prometheus [k8s]",
+        "datasource": "Prometheus MyCredit Production",
         "enable": true,
         "expr": "sum(changes(nginx_ingress_controller_config_last_reload_successful_timestamp_seconds{instance!=\"unknown\",controller_class=~\"$controller_class\",namespace=~\"$namespace\"}[30s])) by (controller_class)",
         "hide": false,
@@ -43,7 +43,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "format": "ops",
       "gauge": {
         "maxValue": 100,
@@ -125,7 +125,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -208,7 +208,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "format": "percentunit",
       "gauge": {
         "maxValue": 100,
@@ -290,7 +290,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "decimals": 0,
       "format": "none",
       "gauge": {
@@ -374,7 +374,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "decimals": 0,
       "format": "none",
       "gauge": {
@@ -454,7 +454,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -564,7 +564,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "decimals": 2,
       "editable": false,
       "error": false,
@@ -665,7 +665,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "description": "Total time taken for nginx and upstream servers to process a request and send a response",
       "fill": 1,
       "fillGradient": 0,
@@ -772,7 +772,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "description": "The time spent on receiving the response from the upstream server",
       "fill": 1,
       "fillGradient": 0,
@@ -880,7 +880,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -971,7 +971,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "description": "For each path observed, its median upstream response time",
       "fill": 1,
       "fillGradient": 0,
@@ -1063,7 +1063,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1154,7 +1154,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1250,7 +1250,7 @@
     },
     {
       "columns": [],
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "fontSize": "100%",
       "gridPos": {
         "h": 8,
@@ -1473,7 +1473,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -1589,7 +1589,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "decimals": 2,
       "editable": false,
       "error": false,
@@ -1691,7 +1691,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "decimals": 3,
       "editable": false,
       "error": false,
@@ -1799,7 +1799,7 @@
           "value": "current"
         }
       ],
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "fontSize": "100%",
       "gridPos": {
         "h": 4,
@@ -1877,7 +1877,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "description": "Percentage of 4xx and 5xx responses among all responses.",
       "fill": 1,
       "fillGradient": 0,
@@ -1969,7 +1969,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "description": "For each path observed, the sum of upstream request time",
       "fill": 1,
       "fillGradient": 0,
@@ -2062,7 +2062,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus [k8s]",
+      "datasource": "Prometheus MyCredit Production",
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -2181,7 +2181,7 @@
           "text": "ingress-nginx",
           "value": "ingress-nginx"
         },
-        "datasource": "Prometheus [k8s]",
+        "datasource": "Prometheus MyCredit Production",
         "hide": 0,
         "includeAll": true,
         "label": "Namespace",
@@ -2205,7 +2205,7 @@
           "text": "nginx",
           "value": "nginx"
         },
-        "datasource": "Prometheus [k8s]",
+        "datasource": "Prometheus MyCredit Production",
         "hide": 0,
         "includeAll": false,
         "label": "Controller Class",
@@ -2229,7 +2229,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "Prometheus [k8s]",
+        "datasource": "Prometheus MyCredit Production",
         "hide": 0,
         "includeAll": true,
         "label": "Controller",
@@ -2253,7 +2253,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "Prometheus [k8s]",
+        "datasource": "Prometheus MyCredit Production",
         "hide": 0,
         "includeAll": true,
         "label": "Ingress",
